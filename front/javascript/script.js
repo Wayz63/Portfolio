@@ -11,9 +11,16 @@ window.addEventListener('load', function() {
             clearInterval(interval);
             setTimeout(function() {
                 loadingScreen.style.display = 'none';
+                playAudio();
             }, 500);
         }
     }, 100);
-    const song = document.getElementById('mainsong');
-    song.play();
 });
+
+function playAudio() {
+    const song = document.getElementById('mainsong');
+    
+    song.play().catch(function(error) {
+        console.log('L\'audio n\'a pas pu être joué en raison de restrictions d\'autoplay.');
+    });
+}
