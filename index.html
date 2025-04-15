@@ -1,83 +1,111 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta property="og:title" content="Théo Vasseur - Portfolio">
-        <meta property="og:description" content="Découvrez mes projets et d'autres informations importantes à mon sujet.">
-        <meta property="og:image" content="https://wayz63.dev/assets/icons/kaneki.png">
-        <meta property="og:url" content="https://wayz63.dev">
-        <meta property="og:type" content="website">
-        <link rel="stylesheet" href="./front/style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-        <title>Portfolio - Théo Vasseur</title>
-    <body>
-        <div id="loading-screen">
-            <div id="progress-bar-container">
-                <div id="progress-bar"></div>
-            </div>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta property="og:title" content="Théo Vasseur - Portfolio">
+    <meta property="og:description" content="Découvrez mes projets et d'autres informations importantes à mon sujet.">
+    <meta property="og:image" content="https://wayz63.dev/assets/icons/kaneki.png">
+    <meta property="og:url" content="https://wayz63.dev">
+    <meta property="og:type" content="website">
+
+    <title>Portfolio - Théo Vasseur</title>
+
+    <!-- Styles CSS -->
+    <link rel="stylesheet" href="./front/css/base.css">
+    <link rel="stylesheet" href="./front/css/layout.css">
+    <link rel="stylesheet" href="./front/css/loading.css">
+    <link rel="stylesheet" href="./front/css/music.css">
+    <link rel="stylesheet" href="./front/css/rain.css">
+    <link rel="stylesheet" href="./front/css/links.css">
+
+    <!-- Police -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Écran de chargement -->
+    <div id="loading-screen">
+        <div id="progress-bar-container">
+            <div id="progress-bar"></div>
+        </div>
+    </div>
+
+    <!-- Clic pour entrer -->
+    <div id="click-to-enter" class="hidden">
+        <p class="click-text">Cliquer pour accéder</p>
+    </div>      
+
+    <!-- Page principale -->
+    <div id="mainpage">
+
+        <!-- Logo + Accueil -->
+        <div class="home-icon">
+            <img src="./assets/icons/kaneki.png" alt="Logo site" id="website-logo">
+        </div>
+        <h1>Accueil</h1>
+
+        <!-- Musique -->
+        <div id="music-toggle" class="music-toggle">
+            🎵 Musique
+        </div>            
+
+        <div class="separator"></div>
+
+        <!-- Projets -->
+        <h2>Mes projets</h2>
+
+        <p class="portfolio">
+            <a href="https://github.com/Wayz63/Portfolio">
+                <img src="./assets/icons/projects/portfolio-banner.png" alt="Projet simple portfolio" width="150" class="portfolio-img">
+            </a>
+        </p>
+        <p class="portfolio-txt">Portfolio</p>
+
+        <!-- À propos -->
+        <h2>À propos</h2>
+
+        <h3>Langages utilisés</h3>
+        <p>HTML</p>
+        <p>CSS</p>
+        <p>JavaScript</p>
+        <p>PHP</p>
+        <p>SQL</p>
+        <p>Python</p>
+
+        <h3>Environnements & frameworks utilisés</h3>
+        <p>
+            <img src="./assets/icons/frameworks/nodejs.png" alt="Logo Node.js" width="50">
+            Node.js
+        </p>
+        <p>
+            <img src="./assets/icons/frameworks/expressjs.png" alt="Logo Express" width="50">
+            Express
+        </p>
+
+        <h3>Bases de données</h3>
+        <p>MariaDB</p>
+        <p>MongoDB</p>
+
+        <!-- Liens de bas de page -->
+        <div class="links-container">
+            <a href="https://github.com/Wayz63" class="footer-links">Mon Github</a>
+            <a href="https://wayz63.dev" class="footer-links">Mon portfolio</a>
+            <a href="./about.html" class="footer-links">À propos de moi</a>
         </div>
 
-        <div id="click-to-enter" class="hidden">
-            <p class="click-text">Cliquer pour accéder</p>
-        </div>      
-          
-        <div id="mainpage">
-            <div class="home-icon">
-                <img src="./assets/icons/kaneki.png" alt="Logo site" id="website-logo">
-            </div>
-            <h1>Accueil</h1>
+        <!-- Audio -->
+        <audio id="mainsong" src="./assets/audios/soundtrack.mp3" preload="auto"></audio>
 
-            <div class="separator"></div>
+        <!-- Script JS -->
+        <script type="module" src="./front/javascript/main.js"></script>
+    </div>
 
-            <h2>Mes projets</h2>
+    <!-- Contrôle de la pluie -->
+    <div id="rain-control" class="hidden">
+        <label for="rain-slider">Intensité de la pluie :</label>
+        <input type="range" id="rain-slider" min="0" max="200" value="100">
+    </div>
 
-            <p class="portfolio">
-                <a href="https://github.com/Wayz63/Portfolio">
-                    <img src="./assets/icons/projects/portfolio-banner.png" alt="Projet simple portfolio" width="150" class="portfolio-img">
-                </a>
-            </p>
-            <p class="portfolio-txt">Portfolio</p>
-
-            <h2>À propos</h2>
-
-            <h3>Languages utilisés</h3>
-            <p>HTML</p>
-            <p>CSS</p>
-            <p>JavaScript</p>
-            <p>PHP</p>
-            <p>SQL</p>
-            <p>Python</p>
-
-            <h3>Environnements & frameworks utilisés</h3>
-            <p>
-                <img src="./assets/icons/frameworks/nodejs.png" alt="Logo Node.js" width="50"> Node.js
-            </p>
-            <p>
-                <img src="./assets/icons/frameworks/expressjs.png" alt="Logo Express" width="50"> Express
-            </p>
-        
-            <h3>Bases de données</h3>
-            <p>MariaDB</p>
-            <p>MongoDB</p>
-
-            <div class="links-container">
-                <p class="github-link">
-                    <a href="https://github.com/Wayz63">Mon Github</a>
-                </p>
-                <p class="portfolio-link">
-                    <a href="https://wayz63.dev">Mon portfolio</a>
-                </p>
-                <p class="aboutme-link">
-                    <a href="./about.html">À propos de moi</a>
-                </p>
-            </div>
-            <audio id="mainsong" src="./assets/audios/soundtrack.mp3" preload="auto"></audio>
-            <script src="./front/javascript/script.js"></script>
-        </div>
-
-        <div id="rain-control" class="hidden">
-            <label for="rain-slider">Intensité de la pluie :</label>
-            <input type="range" id="rain-slider" min="0" max="200" value="100">
-        </div>        
-    </body>
+</body>
 </html>

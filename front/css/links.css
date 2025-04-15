@@ -1,0 +1,19 @@
+.links-container {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+}
+
+.footer-links {
+    display: inline-block;
+    margin: 10px;
+    font-size: 18px;
+    color: #16d4a3;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-links:hover {
+    transform: scale(1.1);
+    color: white;
+}

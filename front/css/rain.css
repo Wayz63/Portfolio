@@ -1,0 +1,47 @@
+.rain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.raindrop {
+    position: absolute;
+    width: 2px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    animation: fall 1s infinite linear;
+}
+
+@keyframes fall {
+    0% { top: -10px; }
+    100% { top: 100%; }
+}
+
+#rain-control {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10000;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: white;
+    font-family: inherit;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+#rain-control.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+#rain-slider {
+    width: 150px;
+    margin-left: 10px;
+}

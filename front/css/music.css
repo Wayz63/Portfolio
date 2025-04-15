@@ -1,0 +1,23 @@
+.music-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(255,255,255,0.8);
+    color: #000;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 1000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.music-toggle:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.music-muted {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
