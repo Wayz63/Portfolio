@@ -1,5 +1,90 @@
 
 body {
+    font-family: "Inter", sans-serif;
     background-color: black;
     color: white;
+}
+
+h1.home-icon {
+    padding-left: 13;
+}
+
+h1 {
+    font-size: 70px;
+    font-weight: 600;
+    padding-top: 35px;
+    padding-left: 25px;
+    padding-bottom: 5px;
+    margin: 0;
+}
+
+h2 {
+    padding-top: 15px;
+    text-align: center;
+    font-size: 35px;
+}
+
+a {
+    color: #16d4a3;
+    text-decoration: none;
+}
+
+.separator {
+    height: 3px;
+    background-color: white;
+    margin: 50px auto;
+    width: 80%;
+}
+
+.portfolio {
+    padding-left: 50px;
+}
+
+.portfolio-txt {
+    padding-left: 92px;
+}
+
+.links-container {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+}
+
+.github-link,
+.portfolio-link,
+.aboutme-link {
+    margin: 0px;
+}
+
+
+
+
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#progress-bar-container {
+    width: 80%;
+    height: 10px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#progress-bar {
+    width: 0;
+    height: 100%;
+    background-color: #3498db;
+    transition: width 0.5s ease;
 }
