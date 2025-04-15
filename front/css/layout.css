@@ -32,9 +32,31 @@ h2 {
     font-size: 35px;
 }
 
+h2.about {
+    padding-top: 175px;
+}
+
 h3 {
-    font-size: 24px;
-    margin-top: 20px;
+    font-size: 23px;
+    padding-top: 50px;
+    padding-left: 150px;
+}
+
+.languages {
+    padding-top: 35px;
+    padding-left: 85px;
+}
+
+.languages p {
+    display: flex;
+    align-items: center; /* aligne verticalement les enfants */
+    gap: 10px; /* espace entre l'icône et le texte */
+    margin-bottom: 35px;
+}
+
+#logos {
+    width: 35px;
+    height: auto;
 }
 
 .separator {
@@ -45,9 +67,7 @@ h3 {
 }
 
 .portfolio {
-    padding-left: 50px;
-}
-
-.portfolio-txt {
-    padding-left: 92px;
+    width: fit-content;
+    margin-left: 85px; /* ou padding-left si tu préfères */
+    text-align: center;
 }
